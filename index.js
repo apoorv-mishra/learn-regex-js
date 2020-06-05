@@ -650,3 +650,48 @@
 	assert.deepEqual(w2.split(/(?<=^[^\d]+)(\d+)/g),["Sample", "123", "string42with777numbers"]);
 	assert.deepEqual(w2.split(/(\d+)(?=[^\d]+$)/g),["Sample123string42with", "777", "numbers"]);
 })();
+
+/*********************************************
+ *             chapter 10                    *
+ *********************************************/
+
+// a) Check if given input strings are made up of
+// ASCII characters only. Consider the input to be
+// non-empty strings and any character that isn't
+// part of 7-bit ASCII set should result in false as output.
+(function() {
+	const assert = require('assert');
+
+	let str1 = '123 × 456'
+	let str2 = 'good fοοd'
+	let str3 = 'happy learning!'
+
+	const p1 = /^[\u{20}-\u{7e}]*$/gu;
+
+	assert.equal(p1.test(str1),false);
+	assert.equal(p1.test(str2),false);
+	assert.equal(p1.test(str3),true);
+})();
+
+
+/**********************************************/
+
+// b) Retain only punctuation characters for the given string.
+(function() {
+	const assert = require('assert');
+
+	let s1 = '❨a❩❪1❫❬b❭❮2❯❰c❱❲3❳❴xyz❵⟅123⟆⟦⟧⟨like⟩⟪3.14⟫'
+
+	// Is this correct? Refer exercise (c) below
+	assert.equal(s1.replace(/\w+/g, ''),"❨❩❪❫❬❭❮❯❰❱❲❳❴❵⟅⟆⟦⟧⟨⟩⟪.⟫");
+})();
+
+
+/**********************************************/
+
+// c) Is the following code snippet showing the correct output?
+// > 'fox:αλεπού'.match(/\w+/g)
+// < ["fox"]
+//
+// Looks like, but I'm NOT SURE!
+
