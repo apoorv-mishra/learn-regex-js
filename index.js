@@ -173,10 +173,6 @@
  *             chapter 4                     *
  *********************************************/
 
-
-
-
-
 // a) Transform given input strings to expected output using same logic on both strings.
 (function() {
 	const assert = require('assert');
@@ -403,7 +399,7 @@
 })();
 
 /*********************************************
- *             chapter 6                     *
+ *             chapter 7                     *
  *********************************************/
 
 // a) Delete all pair of parentheses, unless they contain a parentheses character.
@@ -476,7 +472,7 @@
 
 
 /*********************************************
- *             chapter 7                     *
+ *             chapter 8                     *
  *********************************************/
 
 // a) The given string has fields separated by : and
@@ -566,7 +562,7 @@
 
 
 /*********************************************
- *             chapter 8                     *
+ *             chapter 9                     *
  *********************************************/
 
 // a) Remove leading and trailing whitespaces from all
